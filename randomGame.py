@@ -11,12 +11,12 @@ def test():
     if inputFriend =="1":
         print("Красава!")
     else:
-        print("Ну и нахуй пошел!")
-        messageWhere = "Ну а если не нахуй, то куда? Свой вариант давай: "
+        print("Ну и нафиг пошел!")
+        messageWhere = "Ну а если не нафиг, то куда? Свой вариант давай: "
         print(messageWhere)
         inputWhere = input()
-        while inputWhere.lower() != "нахуй":
-            print(messageWhere.replace("нахуй", inputWhere))
+        while inputWhere.lower() != "нафиг":
+            print(messageWhere.replace("нафиг", inputWhere))
             inputWhere = input()
         else:
             print("А ты ерепенился =)")
@@ -65,5 +65,5 @@ def inputEmptyCheck(inputMessage):
     return varName
 
 
-randomNumberGame()
+
     
