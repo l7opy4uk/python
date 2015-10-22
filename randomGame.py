@@ -37,18 +37,18 @@ def randomNumberGame():
     randomNumber = random.randint(1,100)
     strLess = "It's less..."
     strMore = "It's more"
-    inputNumberStr = inputEmptyCheck("Enter your number: ")
+    inputNumberStr = inputEmptyDigitCheck("Enter your number: ")
     inputNumber = int(inputNumberStr)
     count = 0
     while randomNumber != inputNumber:
         if randomNumber < inputNumber:
             print(strLess)
-            inputNumberStr = inputEmptyCheck("Enter your number: ")
+            inputNumberStr = inputEmptyDigitCheck("Enter your number: ")
             inputNumber = int(inputNumberStr)
             count += 1
         elif randomNumber > inputNumber:
             print(strMore)
-            inputNumberStr = inputEmptyCheck("Enter your number: ")
+            inputNumberStr = inputEmptyDigitCheck("Enter your number: ")
             inputNumber = int(inputNumberStr)
             count += 1
     print("Bingo, it takes you " + str(count) + " attempts to guess a number")
@@ -64,6 +64,11 @@ def inputEmptyCheck(inputMessage):
         varName = input(inputMessage)
     return varName
 
+## Will check for empty field and digits. Usage example:
+##inputName = (inputEmptyDigitCheck("Login: ")
+def inputEmptyDigitCheck(inputMessage):
+    varName = ""
+    while not varName.isdigit():
+        varName = input("(It's must be a digit) " + inputMessage)
+    return varName
 
-
-    
