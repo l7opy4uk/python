@@ -30,3 +30,36 @@ def polindrom():
 
 
 geron_formule()
+
+
+grn1 = kop50 = kop25 = kop5 = kop1 = 0.00
+try:
+    amount = float(input("Input amount of your money: "))
+    if amount < 0:
+        raise ValueError
+except:
+    print("Error! Wrong input.")
+else:
+    grn1= amount // 1
+    amount = (amount % 1)*100
+    kop50 = amount // 50
+    amount = amount % 50
+    kop25 = amount // 25
+    amount = amount % 25
+    kop5 = amount // 5
+    amount = amount % 5
+    kop1 = amount // 1
+
+    if grn1 > 0:
+        print("По 1 грн нужно: \t",  int(grn1))
+    if kop50 > 0:
+        print("По 50 коп нужно: \t",  int(kop50))
+    if kop25 > 0:
+        print("По 25 коп нужно: \t",  int(kop25))
+    if kop5 > 0:
+        print("По 5 коп нужно: \t",  int(kop5))
+    if kop1 > 0:
+        print("По 1 коп нужно: \t",  int(kop1))
+    
+
+
