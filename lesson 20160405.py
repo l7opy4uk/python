@@ -8,11 +8,13 @@ def geron_formule():
         c = int(input("c?"))
 
         if not ((a + b > c) and (a + c > b) and (c + b > a)):
-            raise ValueError
+            raise ValueError("Triangle doesn't exist")
          
-    except:
-            print("Triangle doesn't exist")
+    except ValueError as err:
+            
+            print(err)
             exit()
+    
     else:
         p = (a + b + c)/2
         print("p =", p)
